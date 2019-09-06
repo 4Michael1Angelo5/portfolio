@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/4Michael1Angelo5.github.io/portfolio",
+  "homepage": "https://4Michael1Angelo5.github.io/portfolio",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-social": "^5.1.1",

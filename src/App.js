@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {  BrowserRouter,Route, Switch } from 'react-router-dom';
+import {  HashRouter,Route, Switch } from 'react-router-dom';
 import {CONTENT} from './assets/content1';
 import Cubes from './components/cubeComponent1';
 import About from './components/aboutComponent' ;
@@ -20,7 +20,7 @@ class App extends Component {
   render() {
     return (
       
-     <BrowserRouter> 
+      <HashRouter basename='/'>
       <div className="App">
         <Header content = {CONTENT} setCategory ={(category)=>this.setState({category})} filterContent ={(content)=>this.setState({content})}/>
         <Switch>
@@ -30,7 +30,7 @@ class App extends Component {
        <Footer/>
       </div>
 
-    </BrowserRouter>
+    </HashRouter>
       
      
       
