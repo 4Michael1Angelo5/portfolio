@@ -1,33 +1,813 @@
-.App {
+
+
+.body{
+  width:100%;
+ 
+  font-family: NewFont;
+  background-color : rgb(54, 51, 51);
+  /* font-size: 1em;
+  font-weight: bold;  */
+  width : 100% ; 
+  height: 100% ; 
+  position: absolute ;  
+}
+
+.App{
+/* 
+  background-image: linear-gradient( to bottom , rgb(8, 8, 8) 50% ,rgb(112, 107, 107) 100%); */
+  /* minimal theme  */
+  background: linear-gradient(to bottom, #f4f4f4 25%,#cecece 49%,#a5a5a5 65%,#4f4f4f 100%); 
+  /* darker minimal */
+  background: linear-gradient(to bottom, #282424 27%,#a09f9f 49%,#7b7474 65%,#000000 100%) ; 
+  /* cyberpunk theme */
+  /* background:  radial-gradient( #30CFD0 0%, #330867 100%); */
+  /* background-image:  url("assets/images/neon_tokyo_background.jpg") ;  */
+  background-position: 65% 50%;
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: fixed;
+  overflow: auto;
+  position: relative;
+  height: 100%;
+  padding-bottom: 500px;
+}
+
+
+.nopadding {
+  transform: translateX(-15px)
+}
+
+/*--------------------------------------------     FONTS   --------------------------------------------- */
+
+
+@font-face {
+  font-family: NewFont;
+          src: url(Fonts/Exan/Exan-Regular.ttf);
+          
+  } 
+
+@font-face {
+  font-family: TitleFont;
+          src: url(Fonts/Azedo/Azedo-Light.otf);
+              
+}  
+
+@font-face {
+  font-family: Prime;
+          src: url(Fonts/Prime/Prime-Regular.ttf);
+              
+}  
+
+@font-face {
+
+  font-family: Simple;
+  src: url(Fonts/Simplfica/Simple.ttf);
+}
+
+/*------------------------------------------------ Side Navigation/ Dropdown-Menu------------------------------------------------- */
+/* color of filter tab */
+
+.filter-tab{
+  background-color: rgba(40, 36, 36, 0.49019607843137253) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  /* position: fixed;  original*/ 
+  position : relative;
+  width: 36px;
+  height: 30px;
+  /* left: 36px;  original */
+  left: 15vw ; 
+  top: 15px;
+ 
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+a {
+  color: #cececf;
+}
+
+
+
+
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  /* background: #373a47;  original*/
+  /* background:#08080894 ;  */
+  background:rgba(8, 8, 8, 0.5803921568627451);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  backdrop-filter: blur(4px);
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+.overlayMod{
+  position: relative; 
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+
+  background: rgba(0, 0, 0, 0.3);
+}
+/* --------------------------------HamburgerSlider------------------------------ */
+/* @keyframes SlideInNavFromRight{
+  from{transform: translateX(100%) }
+  to{transform: translateX(0px)}
+  } */
+
+/* .dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  animation-name:  SlideInNavFromRight ;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  
+} */
+      /* For Bootstrap 4, use .dropdown.show instead of .dropdown.open */
+
+
+.collapse:not(.show) {
+  display: none !important;}
+
+.dropdown-menu.show div{
+  padding-left: 10px;
+  
+}
+
+.dropdown-filter-header{
+  padding: 0px !important;
+
+}
+
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{
+  
+  color:#1ac2c1;
+  
+
+}
+
+.dropdown-item{ 
+  border-top: 1px solid rgb(180, 174, 174) !important; 
+  padding: 0rem .5rem !important;
+  padding-top: 1em !important;
+  padding-bottom:1em !important;
+  color: #38a8d4 !important;
+ 
+}
+.dropdown-item:hover {
+  background-color: rgba(84, 87, 89, 0.5098039215686274) !important;
+  color: #38a8d4 !important;
+  box-shadow:  inset 0 0 10px #1fa4d9
+}
+
+.nav-link{
+  padding:0px !important;
+}
+
+.nav-icon1 {
+  width: 50px;
+  height: 35px;
+  position: relative;
+  margin: 0px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-icon1 span{
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  /* background: #d3531a; */
+  background: #b4b4b4 ; 
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+.nav-icon1 span:nth-child(2) {
+  top: 12px;
+}
+
+.nav-icon1 span:nth-child(3) {
+  top: 24px;
+}
+
+.nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+/* ------------------------------ HEADER ------------------------------ */
+
+div.jumbotron {
+  padding: 0px 10px 2px 10px ; 
+  margin-bottom: 40px ;
+  /* color:whitesmoke; */
+  /* color:  #ecd9d9; */
+  color:#dddef1; 
+  border-radius: 0px ; 
+  background-image: linear-gradient(to bottom,    rgba(22, 21, 21, 0.95) 0%, rgba(96, 95, 95, 0.5019607843137255) 100%),   url("assets/images/banner5.png");
+  background-position: 47%  100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 0 ; 
+  font-family: NewFont;
+ 
+}
+
+div.jumbotron h1{
+  font-family: NewFont ;  
+  font-size: 14vw ;
+  background: linear-gradient(to right, #1a94db 0%, #f6f7fc 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-overflow:clip;
+}
+div.jumbotron h4{
+
+  font-size: 4.5vw;
+}
+
+@media only screen and (min-width : 992px) {
+
+  div.jumbotron h1{
+    font-family: NewFont ;  
+    font-size: 8vw ;
+    color:rgba(0, 156, 204,0.671) 
+    
+  
+  }
+  div.jumbotron h4{
+  
+    font-size: 2vw;
+  }
+
+
+}
+
+.jumbotron p {
+  font-size: 2vw; 
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width :576px) {
+  .jumbotron p {
+    font-size: 3vw; 
+    text-align: center;
   }
 }
+/* ------------------------------ FOOTER PAGE ------------------------------ */
+
+.footer{
+  background-color: #D1C4E9;
+  background-image: linear-gradient(to top,   #605f5f80   0%, rgba(22, 21, 21, 0.95) 100%),
+  url("assets/images/banner2.png") ; 
+  background-size: cover;
+  margin:0px auto;
+  margin-top:20px ; 
+  padding: 20px 0px 20px 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+ 
+}
+/* ------------------------------ ABOUT PAGE ------------------------------ */
+
+.aboutTitle{
+  font-family: NewFont; 
+  font-size:3vw;  
+  
+ 
+}
+.imgCircle{
+  height: 40vw;
+  background: #eee no-repeat center;
+  background-size: cover;
+  box-shadow:  0px 4px 12px 4px rgba(0, 0, 0, 0.2);
+}
+
+#aboutPhoto{
+  background-image: url("assets/images/about.JPG") ;
+
+}
+
+.aboutParagraph{
+  padding:10px;
+  background-color: aliceblue; 
+  font-family: Prime; 
+  box-shadow:  0px 4px 12px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+
+
+ 
+
+/* ------------------------------ ANIMATIONS ------------------------------ */
+
+/* .cube.active{
+ 
+  animation-name: renderContent ;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes renderContent {
+from{transform: scaleX(1) scaleY(1) rotateX(0deg) }
+to{transform: scaleX(2) scaleY(2) rotateY(90deg)}
+}
+
+.cube.inactive{
+  animation-name: hideInactiveContent ;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideInactiveContent {
+  from{transform:scaleX(1) scaleY(1) translateZ(0px);opacity: 1;}
+  to{transform:scaleX(.05) scaleY(.05) translateZ(-10px);opacity:0}
+  }  */
+
+  .col-6.col-md-4.col-sm-4.col-xs-6.inactive{
+    animation-name: hideContent ;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes hideContent {
+    from{transform: translateX(0px) translateZ(0px);opacity: 1;}
+    to{transform: translateX(-1500px)translateZ(-10px);opacity:0}
+   
+    }
+
+  .col-6.col-md-4.col-sm-4.col-xs-6 {
+    animation-name: renderBackContent ;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes renderBackContent {
+    from{transform: translateZ(0px);opacity: 0;}
+    to{transform: translateZ(10px);opacity:1}
+    }
+
+
+/* ------------------------------CUBE STYLE------------------------------ */
+
+
+    .view1b {
+  
+      perspective: 3032px;
+      -webkit-perspective: 3032px ;  
+      -moz-perspective: 3032px ; 
+      
+    
+      /* perspective-origin: 500px 500px ;
+      -webkit-perspective-origin:500px 500px; 
+      -moz-perspective-origin: 500px 500px ;   */
+     
+      
+      
+    }
+    
+    
+    .cube {
+      
+      transform-style:preserve-3d ; 
+      -webkit-transform-style: preserve-3d; 
+      -moz-transform-style: preserve-3d ; 
+      
+      transform: translateZ(150px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -webkit-transform: translateZ(150px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -moz-transform: translateZ(150px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    
+    .cube:hover, .cube:active{
+      transform: translateZ(180px);
+      
+    }
+    
+    .box1{
+      
+      width:  26vw; 
+      height: 26vw;
+      margin : 2vh auto 2vh auto ; 
+      /* margin : 10px auto 10px auto ;  */
+    }
+
+  .side{
+
+    position: absolute ; 
+    width:26vw;
+    height:26vw;
+    /* cyber punk ux */
+    background:  radial-gradient( #30CFD0 0%, #330867 100%);
+    background: radial-gradient( rgba(13, 243, 244, 0.5) 0%, rgba(51, 8, 103, 0.5) 100%);
+    /* light theme */
+    /* background: radial-gradient( #f9f9f9 0%, #666e7f 100%) ;  */
+    /* background: rgba(0, 156, 204,0.671);  */
+    /* border: 3px solid rgba(138, 44, 156,1) ;   #36c0be */
+    border: 1.5px solid #36c0be ;  
+    /* border-radius: 10px ;  */
+    box-shadow:  0px 4px 12px 4px rgba(0, 0, 0, 0.2);
+    
+ 
+  }
+    
+  .front {
+    transform: translateZ(13vw);
+    -webkit-transform: translateZ(13vw);
+    -moz-transform: translateZ(13vw);
+    background-color : rgb(0, 0, 0);
+    background-size: cover;
+    /* image-orientation: from-image; */
+    opacity: .65;
+}
+
+.front:hover{
+
+  opacity:1 ; 
+}
+.top {
+  transform: rotateX(90deg) translateZ(13vw);
+  -webkit-transform: rotateX(90deg) translateZ(13vw);
+}
+.right {
+  transform: rotateY(90deg) translateZ(13vw);
+  -webkit-transform: rotateY(90deg) translateZ(13vw);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(13vw);
+  -webkit-transform: rotateY(-90deg) translateZ(13vw);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(13vw);
+  -webkit-transform: rotateX(-90deg) translateZ(13vw); 
+}
+.back {
+  transform: rotateY(-180deg) translateZ(13vw);
+  -webkit-transform: rotateY(-180deg) translateZ(13vw) ;
+  /* border: 1.5px solid #36c0be18 ;  */
+  border: 1.5px solid #36c0be;
+}
+
+
+  @media only screen and (max-width :576px) {
+   .view1b{ 
+    
+    perspective: 2500px;
+    /* perspective-origin: 500px 500px ; */
+    
+    }
+    .cube {
+      
+      transform-style:preserve-3d ; 
+      -webkit-transform-style: preserve-3d; 
+      -moz-transform-style: preserve-3d ; 
+      
+      transform: translateZ(10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -webkit-transform: translateZ(10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      -moz-transform: translateZ(10px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    
+    .cube:hover, .cube:active{
+      transform: translateZ(20px);
+      
+    }
+    
+    .box1{
+
+      width:42vw;
+      height:42vw;
+     margin: 2vh auto 2vh auto;
+     /* margin: 10px auto 10px auto; */
+     
+    }
+    .side{
+
+      position: absolute ; 
+      width:42vw;
+      height:42vw;
+      /* background: rgba(0, 156, 204,0.671);  */
+       /* cyber punk ux */
+      background:  radial-gradient( #30CFD0 0%, #330867 100%);
+      background: radial-gradient( rgba(13, 243, 244, 0.5) 0%, rgba(51, 8, 103, 0.5) 100%);
+       /* light theme */
+      /* background: radial-gradient( #f9f9f9 0%, #666e7f 100%) ;  */
+      /* border: 3px solid rgba(138, 44, 156,.7) ;  */
+      border: 1.5px solid #36c0be ; 
+      
+      /* border-radius: 10px ;  */
+      box-shadow:  0px 4px 12px 4px rgba(0, 0, 0, 0.2)
+    }  
+
+    
+    .front {transform: translateZ(21vw);
+            background-color : rgb(0, 0, 0);
+            background-size: cover;
+            opacity:.65 ; 
+           
+    }
+
+    .front:hover{
+
+      opacity:1 ; 
+    }
+    .top {transform: rotateX(90deg) translateZ(21vw);}
+    .right {transform: rotateY(90deg) translateZ(21vw);}
+    .left {transform: rotateY(-90deg) translateZ(21vw);}
+    .bottom {transform: rotateX(-90deg) translateZ(21vw);}
+    .back {transform: rotateY(-180deg) translateZ(21vw);
+      /* border: 3px solid #36c0be18 ; */
+      border: 1.5px solid #36c0be;
+    }
+      }
+
+
+
+/* --------------------------------- content ---------------------------------  */
+
+.content {
+  height:80%;
+  width:100% ;  
+  padding-bottom: 50px;
+  border-radius: 5px;
+  background-color : rgb(255, 255, 255);
+  background-size: cover;
+  overflow: hidden;
+  backface-visibility: hidden;
+  
+}
+
+.content h1{
+  margin-top:10px;
+  margin-bottom:5px ; 
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+  font-size: 10px ; 
+  font-weight: bold;
+  color: black;
+  text-align:center ;
+}
+
+.content p{
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  font-size: 5px ;
+  backface-visibility: hidden;
+  color: black;
+}
+
+.titleDivider { 
+  width: 100% ; 
+  height: 1px ; 
+  background-color: black;
+  
+ 
+}
+
+
+.child{
+  width: calc(100% + 15px);
+  height:100% ; 
+  overflow-y: scroll;
+  overflow-x: hidden;
+ scroll-padding: 10px;
+  
+  padding-right: 30px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  width: 0 !important;
+  overflow: -moz-scrollbars-none; 
+  -ms-overflow-style: none;}  
+
+
+
+
+div.card-title{
+  font-size: 14px;
+  background-color:white ; 
+  position:sticky;
+  top:0px;
+  margin:10px 0px 5px 0px; 
+  border-bottom: 5px solid rgba(255,255,255,.5)
+
+}
+
+div.card{
+  border:0px;
+  max-width: 100%;
+  max-height:100%;
+
+}
+/* div.card-body{
+
+  padding: 0px 10px 15px 10px;
+  overflow-y: scroll ;
+} */
+.card-text{
+font-size: 10px;
+
+}
+.contentCard{
+  padding: 0px 10px 15px 10px !important;
+  overflow-y: scroll ;
+}
+
+/* .activeCubeBackground{
+  display:inline-block;
+} */
+
+/* -------------------------Buttons  -------------------------*/
+
+/* -- 1) left-back-arrow */
+
+#back-arrow-00{
+    width:50% ; 
+    height:50%;
+    border-left: 1.5px solid rgb(19, 105, 163); 
+    border-top: 1.5px solid rgb(19, 105, 163);
+    transform:    rotate(-45deg)  ; 
+    border-radius: 1px ; 
+    background-color:rgba(0,0,1,0) ;
+ 
+        
+  }
+  
+  #arrow-line{
+    width:130%; 
+    border-top: 1.5px solid grey ; 
+    transform:rotate(45deg) translateY(3px);
+    
+  }
+  
+  #back-arrow-00:hover{
+    background-color:rgba(0,0,1,0) ;
+    
+  }
+  
+  
+  
+  #circle { 
+ 
+   width: 15% ;
+   height:15% ; 
+   position: absolute;
+   top:0px;
+   left:0px ;
+   z-index:1000; 
+    
+    border-radius:100% ;
+    background-color:rgba(0,0,1,0) ; 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  
+  #circle:hover{
+   background-color:rgba(153, 153, 153,.5) ;
+   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2)
+  }
+
+  .card{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  /* -- 2) close-button */
+.close {
+  position: absolute;
+  right: -32px;
+  top: -32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: rgb(150, 146, 146);
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
+ /* -- 3) favicon */
+
+ .favIco{
+  width:50px;
+  height:50px;
+  background-image: url("assets/images/logo4.png");
+  background-size:cover;
+
+ }
+
+
+
+
+

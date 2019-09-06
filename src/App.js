@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import {  BrowserRouter,Route, Switch } from 'react-router-dom';
+import {CONTENT} from './assets/content1';
+import Cubes from './components/cubeComponent1';
+import About from './components/aboutComponent' ;
+import Footer from './components/footerComponent';
+import Header  from './components/headerComponent2'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  constructor(props){
+    super(props) ;             
+    this.state = {
+      content :CONTENT,
+      category :"all"
+    };
+  
 
+  }
+  render() {
+    return (
+      
+     <BrowserRouter> 
+      <div className="App">
+        <Header content = {CONTENT} setCategory ={(category)=>this.setState({category})} filterContent ={(content)=>this.setState({content})}/>
+        <Switch>
+       <Route exact path='/about' component={()=> <About/>} />
+       <Cubes content = {this.state.content} category={this.state.category}/> 
+       </Switch>
+       <Footer/>
+      </div>
+
+    </BrowserRouter>
+      
+     
+      
+    );
+  }
+}
 export default App;
