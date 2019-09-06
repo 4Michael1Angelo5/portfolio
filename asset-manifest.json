@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/4Michael1Angelo5.github.io/portfolio/static/css/main.1189fe1f.chunk.css",
-    "main.js": "/4Michael1Angelo5.github.io/portfolio/static/js/main.aa5e0d0e.chunk.js",
-    "main.js.map": "/4Michael1Angelo5.github.io/portfolio/static/js/main.aa5e0d0e.chunk.js.map",
-    "runtime~main.js": "/4Michael1Angelo5.github.io/portfolio/static/js/runtime~main.c02b9cf8.js",
-    "runtime~main.js.map": "/4Michael1Angelo5.github.io/portfolio/static/js/runtime~main.c02b9cf8.js.map",
-    "static/css/2.79841f5e.chunk.css": "/4Michael1Angelo5.github.io/portfolio/static/css/2.79841f5e.chunk.css",
-    "static/js/2.237de756.chunk.js": "/4Michael1Angelo5.github.io/portfolio/static/js/2.237de756.chunk.js",
-    "static/js/2.237de756.chunk.js.map": "/4Michael1Angelo5.github.io/portfolio/static/js/2.237de756.chunk.js.map",
-    "index.html": "/4Michael1Angelo5.github.io/portfolio/index.html",
-    "precache-manifest.7f765888fa2989c60a64217fd6e28335.js": "/4Michael1Angelo5.github.io/portfolio/precache-manifest.7f765888fa2989c60a64217fd6e28335.js",
-    "service-worker.js": "/4Michael1Angelo5.github.io/portfolio/service-worker.js",
-    "static/css/2.79841f5e.chunk.css.map": "/4Michael1Angelo5.github.io/portfolio/static/css/2.79841f5e.chunk.css.map",
-    "static/css/main.1189fe1f.chunk.css.map": "/4Michael1Angelo5.github.io/portfolio/static/css/main.1189fe1f.chunk.css.map",
-    "static/media/App.css": "/4Michael1Angelo5.github.io/portfolio/static/media/logo4.5b308e98.png",
-    "static/media/font-awesome.css": "/4Michael1Angelo5.github.io/portfolio/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/portfolio/static/css/main.b74aa516.chunk.css",
+    "main.js": "/portfolio/static/js/main.a6e57005.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.a6e57005.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.cbff171f.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.cbff171f.js.map",
+    "static/css/2.9d787410.chunk.css": "/portfolio/static/css/2.9d787410.chunk.css",
+    "static/js/2.5f369472.chunk.js": "/portfolio/static/js/2.5f369472.chunk.js",
+    "static/js/2.5f369472.chunk.js.map": "/portfolio/static/js/2.5f369472.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.43834af84182a43286f4917232f293e8.js": "/portfolio/precache-manifest.43834af84182a43286f4917232f293e8.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.9d787410.chunk.css.map": "/portfolio/static/css/2.9d787410.chunk.css.map",
+    "static/css/main.b74aa516.chunk.css.map": "/portfolio/static/css/main.b74aa516.chunk.css.map",
+    "static/media/App.css": "/portfolio/static/media/logo4.5b308e98.png",
+    "static/media/font-awesome.css": "/portfolio/static/media/fontawesome-webfont.fee66e71.woff"
   }
 }
